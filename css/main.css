@@ -12,7 +12,7 @@
     --primary-color: rgb(27, 116, 232);
     --secondary-color: rgb(33, 145, 68);
     --light-color: #f3f3f3;
-    --dark-color: #333333;
+    --dark-color: linear-gradient(#525252, #3d72b4);
     --max-width: 1100px;
 }
 
@@ -20,6 +20,7 @@
     --computer-science-color: linear-gradient(#373B44, #4286f4);
     --startup-color: linear-gradient(#aa4b6b, #3b8d99);
     --technology-stack-color: linear-gradient(#108dc7, #ef8e38);
+    --entrepreneurship-color: linear-gradient(#ffd89b, #19547b);
     --programming-color: linear-gradient(#1c92d2, #f2fcfe);
 }
 
@@ -50,8 +51,8 @@ img {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'PT Sans Narrow', sans-serif;
-    margin-bottom: 0.55rem;
-    line-height: 1.4;
+    margin-bottom: 0.6rem;
+    line-height: 1.5;
 }
 
 /* Utility */
@@ -75,6 +76,7 @@ h1, h2, h3, h4, h5, h6 {
 .category-computer-science { background: var(--computer-science-color) }
 .category-startup { background: var(--startup-color) }
 .category-technology-stack { background: var(--technology-stack-color) }
+.category-entrepreneurship { background: var(--entrepreneurship-color) }
 .category-programming { background: var(--programming-color) }
 
 .btn {
@@ -98,6 +100,49 @@ h1, h2, h3, h4, h5, h6 {
 .btn:hover {
     opacity: 0.9;
 }
+
+.card {
+    background: #fff;
+    padding: 1rem;
+}
+
+.bg-dark {
+    background: var(--dark-color);
+    color: #fff;
+}
+
+.bg-primary {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+.bg-secondary {
+    background: var(--secondary-color);
+    color: #fff;
+}
+
+.bg-dark h1,
+.bg-dark h2, 
+.bg-dark h3,
+.bg-dark a,
+.bg-primary h1,
+.bg-primary h2, 
+.bg-primary h3,
+.bg-primary a,
+.bg-secondary h1,
+.bg-secondary h2, 
+.bg-secondary h3,
+.bg-secondary a {
+    color: #fff;
+}
+
+.py-1 { padding: 1.5rem 0 }
+.py-2 { padding: 2rem 0 }
+.py-3 { padding: 3rem 0 }
+
+.p-1 { padding: 1.5rem }
+.p-2 { padding: 2rem }
+.p-3 { padding: 3rem }
 
 /* Navigation */
 #main-nav {
@@ -181,4 +226,24 @@ h1, h2, h3, h4, h5, h6 {
 
 #showcase .showcase-content p {
     margin-bottom: 1rem;
+}
+
+/* Home Articles */
+#home-articles .articles-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+}
+
+#home-articles .articles-container > *:first-child,
+#home-articles .articles-container > *:last-child {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    align-items: center;
+    grid-column: 1 / span 2;
+}
+
+#home-articles .articles-container > *:last-child {
+    grid-column: 2 / span 2;
 }

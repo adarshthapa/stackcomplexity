@@ -1,4 +1,4 @@
 # stackcomplexity
 StackComplexity - Technology Blog
 
-###### Live Preview: [StackComplexity](https://stackcomplexity.netlify.com/)
+###### Live Preview: [StackComplexity](http://bit.ly/stackcomplexity1)
